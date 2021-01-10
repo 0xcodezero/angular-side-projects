@@ -1,0 +1,7 @@
+<h1>Server Page Header</h1>
+<input type="text" placeholder="Enter Server Name" id="id-text-input-server-name" [(ngModel)]="newToAddServerName">
+<input type="button" class="btn btn-outline-primary" (click)="onAddingServerAction($event)" value="Add Server" [disabled]="!isEnabled">
+
+<ul>
+    <li *ngFor="let server of serversList"> {{server.serverName}}</li>
+</ul>
