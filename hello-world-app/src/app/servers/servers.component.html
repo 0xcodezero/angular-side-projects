@@ -1,5 +1,5 @@
 <h1>Server Page Header</h1>
-<input type="text" placeholder="Enter Server Name" id="id-text-input-server-name" [(ngModel)]="newToAddServerName">
+<input type="text" placeholder="Enter Server Name" id="id-text-input-server-name" [(ngModel)]="newToAddServerName" (keyup.enter)="onAddingServerAction($event)">
 <input type="button" class="btn btn-primary" (click)="onAddingServerAction($event)" value="Add Server" [disabled]="newToAddServerName === ''">
 
 <ul>

@@ -21,6 +21,9 @@ export class ServersComponent implements OnInit {
   }
 
   onAddingServerAction(event:Event) {
+    if (this.newToAddServerName === ''){
+      return;
+    }
     this.serversList.push(new ServerComponent(this.newToAddServerName));
     this.newToAddServerName = "";
   }
